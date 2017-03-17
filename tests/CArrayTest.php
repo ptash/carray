@@ -21,48 +21,48 @@ class CArrayTest extends TestCase
      */
     public function providerTestIsAssociative()
     {
-        return [
-            [
-                'data' => [
+        return array(
+            array(
+                'data' => array(
                     'a' => 'a', 'm' => 'b', 'x' => 'c', 1 => 'hello', 5 => 'z', '7' => 'y', 'hello' => 'x'
-                ],
+                ),
                 'result' => true,
-            ],
-            [
-                'data' => [
+            ),
+            array(
+                'data' => array(
                     5 => 'z', 1 => 'hello', '7' => 'y', 'a' => 'a', 'hello' => 'x', 'x' => 'c', 'm' => 'b'
-                ],
+                ),
                 'result' => true,
-            ],
-            [
-                'data' => [
+            ),
+            array(
+                'data' => array(
                     0 => 'a', 1 => 'b', 2 => 'c', 3 => 'd', 4 => 'e',
-                ],
+                ),
                 'result' => false,
-            ],
-            [
-                'data' => [
+            ),
+            array(
+                'data' => array(
                     "1" => 'a', "0" => 'b', "2" => 'c'
-                ],
+                ),
                 'result' => true,
-            ],
-            [
-                'data' => [
+            ),
+            array(
+                'data' => array(
                     "0" => 'a', "1" => 'b', "2" => 'c'
-                ],
+                ),
                 'result' => false,
-            ],
-            [
-                'data' => [
+            ),
+            array(
+                'data' => array(
                     'a', 'b', 'c'
-                ],
+                ),
                 'result' => false,
-            ],
-            [
-                'data' => [],
+            ),
+            array(
+                'data' => array(),
                 'result' => false
-            ],
-        ];
+            ),
+        );
     }
 
     /**
